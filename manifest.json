@@ -4,22 +4,21 @@
     "version": "1.0",
     "description": "Apply a mosaic effect on selected areas of the screen.",
     "permissions": [
-        "activeTab"
+      "activeTab",
+      "contextMenus"
+    ],
+    "host_permissions": [
+      "<all_urls>"
     ],
     "background": {
-        "service_worker": "background.js"
+      "service_worker": "background.js"
     },
     "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": [
-                "content.js"
-            ],
-            "css": [
-                "style.css"
-            ]
-        }
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["style.css"]
+      }
     ]
-}
+  }
+  
