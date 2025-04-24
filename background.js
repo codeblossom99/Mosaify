@@ -4,10 +4,14 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 // 右鍵選單
-chrome.contextMenus.create({
-    id: 'mosaify',
-    title: 'Enable Mosaify',
-    contexts: ['all'],
+chrome.runtime.onInstalled.addListener(() => {
+    console.log('Mosaify extension installed');
+
+    chrome.contextMenus.create({
+        id: 'mosaify',
+        title: 'Enable Mosaify',
+        contexts: ['all'],
+    });
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
@@ -15,3 +19,4 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         chrome.tabs.sendMessage(tab.id, { action: 'enableMosaify' });
     }
 });
+
