@@ -1,6 +1,14 @@
 let selectedAreas = [];
 
-decodeURIComponent.addEventListener('DOMContentLoaded', () => {
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === 'enableMosaify') {
+        console.log("Mosaify enabled");
+        // 在此處加入顯示模糊效果的邏輯
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("✅ content.js loaded");
     document.addEventListener('dblclick', (e) => {
         e.preventDefault();
         createSelectionBox(e);
