@@ -1,6 +1,7 @@
 ## 🧩 Mosaify
 
-### 繁體中文 (Taiwan)
+### 保護隱私的小too
+
 
 Mosaify 是一款瀏覽器擴充功能, 支援Google Chrome 與 Microsoft Edge, 讓你能夠快速在網頁上選取區域並套用馬賽克效果, 保護敏感資訊或隱私畫面, 尤其是在展示作品或進行截圖時特別實用
 
